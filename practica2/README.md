@@ -64,3 +64,5 @@ sudo systemctl restart cron.service
 ```
 
 Adjunto un ejemplo en el que se realiza la copia de la maquina 1 a la 2 donde aparecen dos nuevos archivos de test para comprobar su correcto funcionamiento. 
+
+![ejemplo](img/ejemplo.png)
