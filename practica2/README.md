@@ -3,9 +3,9 @@
 ## Objetivos 
 Los objetivos concretos de esta segunda práctica son: 
 * aprender a copiar archivos mediante ssh 
-*  clonar contenido entre máquinas 
-*  configurar el ssh para acceder a máquinas remotas sin contraseña 
-*  establecer tareas en cron
+* clonar contenido entre máquinas 
+* configurar el ssh para acceder a máquinas remotas sin contraseña 
+* establecer tareas en cron
 
 ## Configurar el SSH sin contraseña
 Nuestro objetivo es realizar copias de seguridad de forma automática desde la máquina 1 a la 2. Para ello la máquina 2 va a necesitar acceder a la primera máquina mediante ssh sin necesidad de que el usuario introduzca la contraseña una y otra vez.
@@ -26,9 +26,16 @@ Completados estos pasos ahora la máquina 2 puede conectarse sin contraseña a l
 
 ![ssh](img/ssh.png)
 
-## Realizar copias de archivos mediante rsync
+## Realizar copias de archivos mediante tar y rsync
 
-Para realizar las copias primero hace falta adjudicar permisos de propiedad sobre los directorios en **ambas** maquinas:
+Podemos crear archivos tar.gz de un equipo y enviarlo a otro encauzando la salida del comando tar a ssh fácilmente:
+
+```
+tar czf - /var/www/html/hola.html | ssh 192.168.56.110 'cat > ~/tar.tgz'
+```
+![tar](img/tar.png)
+
+Para realizar las copias mediante rsync primero hace falta adjudicar permisos de propiedad sobre los directorios en **ambas** maquinas:
 
 ```
 sudo chown jescobar:jescobar –R /var/www
