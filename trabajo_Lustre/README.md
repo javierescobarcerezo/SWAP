@@ -11,7 +11,7 @@ Lustre es un sistema de archivos distribuido de los más usados a lo largo del m
 
 Una de sus principales características es que puede dar servicio como máximo entre 10000 y 20000 clientes. Se puede usar especialmente en casos en los que se sobrepasa la capacidad que un solo servidor puede proporcionar.
 
-    Lustre está compuesto por varias máquinas conectadas entre sí, cada una con un papel concreto. Puede funcionar en una gran variedad de kernels y su escalabilidad depende del número de nodos clientes, almacenamiento en disco y el ancho de banda.
+Lustre está compuesto por varias máquinas conectadas entre sí, cada una con un papel concreto. Puede funcionar en una gran variedad de kernels y su escalabilidad depende del número de nodos clientes, almacenamiento en disco y el ancho de banda.
 
 ## Componentes de Lustre
 - **Cliente**: Es desde donde se hacen las peticiones a Lustre para obtener los datos. El nivel de abstracción permite hacer que parezca que el sistema de archivos estuviera localmente en él.
