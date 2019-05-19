@@ -13,3 +13,4 @@ Documentación y prácticas de Servidores Web de Altas Prestaciones 2019
 
 [Práctica 6. Servidor de disco NFS](./practica6)
 
+[Instalación y configuración de un servidor Lustre](./trabajo_Lustre)
