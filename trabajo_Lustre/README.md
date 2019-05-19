@@ -181,6 +181,12 @@ Y para que se monte al iniciar el nodo añadiremos a */etc/fstab* la siguiente l
 /dev/sdb /mnt/mdt lustre defaults 0 0
 ```
 
+Finalmente iniciar su servicio:
+```
+systemctl status lustre
+systemctl start lustre
+```
+
 ## Configuración del Servidor OSS/OST
 
 La configuración del OSS/OST es casi idéntica hasta la parte de formatear los discos. Si estáis trabajando con máquinas virtuales podríais clonar el servidor MGS/MDT y sólo faltaría cambiar su IP y formatear su disco como mostramos a continuación. De todas formas volvemos a dejar los pasos en esta sección también.
@@ -250,3 +256,23 @@ Un sencillo test consiste en crear y modificar el mismo archivo desde dos client
 [root@cliente2 lustre]# for i in `seq 1 5`;do echo cliente2>>prueba.txt; done
 [root@cliente1 lustre]# for i in `seq 1 5`;do echo cliente1>>prueba.txt ; done
 ```
+
+## Bibliografía
+
+[Introduction to Lustre](http://wiki.lustre.org/Introduction_to_Lustre)
+
+[Lustre on VirtualBox](https://github.com/lrahmani/lustre-on-virtualbox)
+
+[Basic Lustre Installation and Setup from Stock RPMs](https://lustre.ornl.gov/lustre101-courses/content/C1/L3/LustreBasicInstall.pdf)
+
+[Putting together a Lustre filesystem](https://wiki.whamcloud.com/display/PUB/Putting+together+a+Lustre+filesystem)
+
+[Testing HOWTO](http://wiki.lustre.org/Testing_HOWTO)
+
+[Some Lustre FS basics](https://www.unixgr.com/some-lustre-fs-basics/)
+
+[What is Lustre?](https://www.unixgr.com/what-is-lustre/)
+
+[Installation of Lustre 2.2 in Debian Squeeze](https://wiki.debian.org/Lustre)
+
+[Lustre Wiki](http://wiki.lustre.org/Main_Page)
